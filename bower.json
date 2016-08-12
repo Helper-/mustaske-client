@@ -23,5 +23,8 @@
     "angular-mocks": "^1.3.0"
   },
   "appPath": "app",
-  "moduleName": "mustaskeClientApp"
+  "moduleName": "mustaskeClientApp",
+  "resolutions": {
+    "angular": "1.4.x"
+  }
 }
