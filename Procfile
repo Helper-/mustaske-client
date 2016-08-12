@@ -1,1 +1,1 @@
-web: grunt eserve
+web: npm start
