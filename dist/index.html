@@ -1,7 +1,81 @@
-<!doctype html> <html class="no-js"> <head> <meta charset="utf-8"> <title></title> <meta name="description" content=""> <meta name="viewport" content="width=device-width"> <meta name="theme-color" content="#1d3951"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel="stylesheet" href="styles/vendor.e3984de9.css"> <link rel="stylesheet" href="sz`"> <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">-->  <body ng-app="mustaskeClientApp" ng-cloak> <!--[if lt IE 7]>
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <meta name="theme-color" content="#1d3951">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link rel="stylesheet" href="styles/vendor.e3984de9.css">
+  <link rel="stylesheet" href="styles/main.a96bb6cd.css">
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">-->
+</head>
+<body ng-app="mustaskeClientApp" ng-cloak>
+<!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
   your browser</a> to improve your experience.</p>
-<![endif]--> <!-- Add your site or application content here --> <md-content layout="column" class="page-layout-container" layout-align="center" ng-controller="AppController as appCtrl" flex layout-fill> <login-overlay></login-overlay> <topbar></topbar> <md-tabs layout="column" flex layout-fill md-selected="appCtrl.selectedIndex" class="tabs-main-navigation md-primary" md-swipe-content="true" md-stretch-tabs="always"> <md-tab> <md-tab-label> <md-icon class="page-tab-icon md-accent md-hue-4" md-font-icon="fa fa-question-circle" aria-label="fa-question-circle"></md-icon> </md-tab-label> <md-tab-body flex layout-fill layout-margin="10"> <md-content flex layout-fill> <recent-questions></recent-questions> </md-content> </md-tab-body> </md-tab> <md-tab> <md-tab-label> <md-icon class="page-tab-icon md-accent md-hue-4" md-font-icon="fa fa-star" aria-label="fa-star"></md-icon> </md-tab-label> <md-tab-body layout="column" flex layout-fill layout-margin="10"> <md-content class="bg-extra-light-gray" flex layout-fill> <top-questions></top-questions> </md-content> </md-tab-body> </md-tab> <md-tab> <md-tab-label> <md-icon class="page-tab-icon md-accent md-hue-4" md-font-icon="fa fa-bar-chart" aria-label="fa-bar-chart"></md-icon> </md-tab-label> <md-tab-body flex layout-fill layout-margin="10"> <md-content flex layout-fill> <poll></poll> </md-content> </md-tab-body> </md-tab> <md-tab> <md-tab-label> <md-icon class="page-tab-icon md-accent md-hue-4" md-font-icon="fa fa-cog" aria-label="fa-cogs"></md-icon> </md-tab-label> <md-tab-body flex layout-fill layout-margin="10"> <md-content class="bg-extra-light-gray" flex layout-fill> <settings></settings> </md-content> </md-tab-body> </md-tab> </md-tabs> <question-input-fab ng-if="!isRoomOwner"></question-input-fab> </md-content> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID --> <script>!function (A, n, g, u, l, a, r)
+<![endif]-->
+<!-- Add your site or application content here -->
+
+<md-content layout="column" class="page-layout-container" layout-align="center" ng-controller="AppController as appCtrl"
+            flex layout-fill>
+
+  <login-overlay></login-overlay>
+  <topbar></topbar>
+  <md-tabs layout="column" flex layout-fill
+           md-selected="appCtrl.selectedIndex" class="tabs-main-navigation md-primary"
+           md-swipe-content="true"
+           md-stretch-tabs="always">
+    <md-tab>
+      <md-tab-label>
+        <md-icon class="page-tab-icon md-accent md-hue-4" md-font-icon="fa fa-question-circle"
+                 aria-label="fa-question-circle"></md-icon>
+      </md-tab-label>
+      <md-tab-body flex layout-fill layout-margin="10">
+        <md-content flex layout-fill>
+          <recent-questions></recent-questions>
+        </md-content>
+      </md-tab-body>
+    </md-tab>
+    <md-tab>
+      <md-tab-label>
+        <md-icon class="page-tab-icon md-accent md-hue-4" md-font-icon="fa fa-star" aria-label="fa-star"></md-icon>
+      </md-tab-label>
+      <md-tab-body layout="column" flex layout-fill layout-margin="10">
+        <md-content class="bg-extra-light-gray" flex layout-fill>
+          <top-questions></top-questions>
+        </md-content>
+      </md-tab-body>
+    </md-tab>
+    <md-tab>
+      <md-tab-label>
+        <md-icon class="page-tab-icon md-accent md-hue-4" md-font-icon="fa fa-bar-chart"
+                 aria-label="fa-bar-chart"></md-icon>
+      </md-tab-label>
+      <md-tab-body flex layout-fill layout-margin="10">
+        <md-content flex layout-fill>
+          <poll></poll>
+        </md-content>
+      </md-tab-body>
+    </md-tab>
+    <md-tab>
+      <md-tab-label>
+        <md-icon class="page-tab-icon md-accent md-hue-4" md-font-icon="fa fa-cog" aria-label="fa-cogs"></md-icon>
+      </md-tab-label>
+      <md-tab-body flex layout-fill layout-margin="10">
+        <md-content class="bg-extra-light-gray" flex layout-fill>
+          <settings></settings>
+        </md-content>
+      </md-tab-body>
+    </md-tab>
+  </md-tabs>
+  <question-input-fab ng-if="!isRoomOwner"></question-input-fab>
+</md-content>
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+<script>
+  !function (A, n, g, u, l, a, r)
   {
     A.GoogleAnalyticsObject = l, A[l] = A[l] || function ()
       {
@@ -11,4 +85,17 @@
   }(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
   ga('create', 'UA-74518004-1');
-  ga('send', 'pageview');</script> <script>localStorage.debug = '*';</script> <script src="scripts/vendor.bc81e7f0.js"></script> <script src="/socket.io/socket.io.js"></script> <script src="scripts/scripts.c9e9c18b.js"></script>
+  ga('send', 'pageview');
+</script>
+
+<script>
+  localStorage.debug = '*';
+</script>
+
+<script src="scripts/vendor.7696f66f.js"></script>
+
+<script src="/socket.io/socket.io.js"></script>
+
+<script src="scripts/scripts.d340b2a8.js"></script>
+</body>
+</html>

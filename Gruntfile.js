@@ -530,7 +530,8 @@ module.exports = function (grunt)
       //'imagemin',
       'uglify',
       'filerev',
-      'usemin'
+      'usemin'//,
+      //'htmlmin'
     ]);
 
   grunt.registerTask(
