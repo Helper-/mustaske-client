@@ -1,0 +1,62 @@
+<md-card class="question-card" id="{{question.question_id}}">
+  <md-card-content ng-bind-html="question.question_text">
+  </md-card-content>
+  <!-- Start audience controls -->
+  <md-card-actions ng-if="!isRoomOwner" layout="row">
+    <div flex="50">
+      <div layout="row">
+        <div flex layout-align="center center" layout="column">
+          <span ng-click="upVote(question)">
+            <span ng-show="!question.hasVotedUp"><md-icon class="page-tab-icon"
+                                                          md-font-icon="fa fa-thumbs-o-up"></md-icon></span>
+            <span ng-show="question.hasVotedUp"><md-icon class="page-tab-icon" md-font-icon="fa fa-thumbs-up"></md-icon></span>
+          </span>
+        </div>
+
+        <div flex="auto" layout-align="center center" class="md-body-2" layout="column">
+          <div layout="row">
+            <span class="m-r-5"
+                  ng-class="{'text-gray-lighter': (!question.question_score|| question.question_score >= 0), 'text-warning': (question.question_score < 0)}">{{question.question_score || 0}}</span>
+            <span class="text-gray-lighter"> votes</span>
+          </div>
+        </div>
+        <div flex layout-align="center center" layout="column">
+          <span ng-click="downVote(question)">
+            <span ng-show="!question.hasVotedDown"><md-icon class="page-tab-icon"
+                                                            md-font-icon="fa fa-thumbs-o-down"></md-icon></span>
+            <span ng-show="question.hasVotedDown"><md-icon class="page-tab-icon"
+                                                           md-font-icon="fa fa-thumbs-down"></md-icon></span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </md-card-actions>
+  <!-- End audience controls -->
+  <!-- Start owner controls -->
+  <md-card-actions ng-if="isRoomOwner" layout="row" layout-padding="5" class="btn-no-border m-b-0 p-b-0">
+    <div flex="50" layout="column" layout-align="end start">
+      <div layout="row">
+      <span class="m-r-5"
+            ng-class="{'text-gray-lighter': (!question.question_score|| question.question_score >= 0), 'text-warning': (question.question_score < 0)}">{{question.question_score || 0}}</span>
+        <span class="text-gray-lighter"> votes</span>
+      </div>
+    </div>
+    <div flex="50" ng-click="detailToggle()" layout="column" layout-align="end end">
+      <span class="text-gray-lighter owner-question-card-toggle fa fa-chevron-circle-down fa "
+            ng-class="{'fa-chevron-circle-down': hide, 'fa-chevron-circle-up': !hide}"></span>
+    </div>
+  </md-card-actions>
+  <!-- End owner controls -->
+  <md-card-footer layout="row" ng-hide="hide">
+    <div flex="50" class="text-center" ng-click="warn(question)">
+      <md-button>
+        <md-icon md-font-icon="fa fa-user-times" ng-class="{'is-warned': warned === 1, 'is-banned': warned > 1}">&nbsp;Ban User</md-icon>
+      </md-button>
+    </div>
+    <div flex="50" class="text-center" ng-click="dismiss(question)">
+      <md-button>
+        <md-icon md-font-icon="fa fa-trash-o">&nbsp;Question</md-icon>
+      </md-button>
+    </div>
+  </md-card-footer>
+</md-card>

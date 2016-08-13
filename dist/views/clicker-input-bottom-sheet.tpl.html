@@ -1,0 +1,18 @@
+<md-bottom-sheet>
+    <section layout="row" class="btn-clicker-options">
+      <span class="btn-clicker-option" ng-repeat="button in ctrl.buttons"
+            flex="{{100/ctrl.buttons.length}}"
+            ng-click="ctrl.submitAnswer(button)"
+            layout="column" layout-align="center center"
+            ng-class="{'left': $first, 'middle': $middle, 'right': $last, 'selected': ctrl.answers.current === button}">
+        {{button}}
+      </span>
+    </section>
+    <!--<md-list layout="row" layout-align="center center" layout-padding="auto">-->
+      <!--<md-list-item>-->
+        <!--<md-button ng-repeat="button in ctrl.buttons" class="md-grid-item-content" ng-click="ctrl.submitAnswer(button)">-->
+          <!--{{button}}-->
+        <!--</md-button>-->
+      <!--</md-list-item>-->
+    <!--</md-list>-->
+</md-bottom-sheet>

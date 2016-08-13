@@ -1,0 +1,10 @@
+<md-input-container layout-padding="10" md-no-float class="search-box md-icon-float md-icon-right md-block" ng-show="searchBox">
+  <input type="text" placeholder="Non-Floating Label" ng-model="search.question_text" >
+  <md-icon md-font-icon="fa fa-times" ng-click="searchBox = !searchBox"></md-icon>
+</md-input-container>
+<div layout="row" layout-padding="5" ng-show="!searchBox">
+  <div flex="50"><span class="content-page-title">Recent Question</span></div>
+  <!--<div flex="50"><span class="pull-right"  ng-click="searchBox = !searchBox"><md-icon md-font-icon="fa fa-search"></md-icon></span></div>-->
+</div>
+<question-card x-question="question"
+               ng-repeat="question in ctrl.questions | orderBy: '+' | limitTo: 25 | filter:search"></question-card>

@@ -1,0 +1,54 @@
+<md-dialog>
+  <md-dialog-content layout-padding="10">
+    <h3 class="md-title">Mustaske is an application to facilitate asking questions in a group forum.</h3>
+    <md-content layout="column" class="m-t-0">
+      <h3 class="m-t-0">Join/Create Room</h3>
+      <h4>Professor/Creator</h4>
+      <ol>
+        <li>If you are a professor/creator simply put in a room name and tap create.</li>
+        <li>Once in the room give your students or audience members the room id located on the top right or in the
+          settings menu.
+        </li>
+      </ol>
+      <h4>Student/Audience</h4>
+      <ol>
+        <li>If you are a student or audience member please ask your professor or room owner to give you the room id.
+        </li>
+        <li>The room id should come in the form adjective-noun-number for example: smelly-pussycat-69'</li>
+      </ol>
+
+      <h3>Navigation</h3>
+      <dl class="dl-horizontal">
+        <dt>
+          <md-icon class="page-tab-icon md-primary" md-font-icon="fa fa-question-circle"
+                   aria-label="fa-question-circle"></md-icon> Recent Questions
+        </dt>
+        <dd>Under this tab you can find the most recent questions.</dd>
+        <dt>
+          <md-icon class="page-tab-icon md-primary"
+                   md-font-icon="fa fa-star" aria-label="fa-star"></md-icon> Top Questions
+        </dt>
+        <dd>On this tab you can find the the top 5 upvoted questions.
+        <dd>
+        <dt>
+          <md-icon class="page-tab-icon md-primary" md-font-icon="fa fa-bar-chart"
+                   aria-label="fa-bar-chart"></md-icon> Polls
+        </dt>
+        <dd>This tab allows you to interact with polls
+          (starting polls for a room owner and voting on polls for audience).
+        </dd>
+        <dt>
+          <md-icon class="page-tab-icon md-primary"
+                   md-font-icon="fa fa-cog" aria-label="fa-cogs"></md-icon> Setting
+        </dt>
+        <dd>Under this tab you can find information about this room.</dd>
+      </dl>
+    </md-content>
+
+  </md-dialog-content>
+  <md-dialog-actions>
+    <md-button ng-click="close()" class="md-primary">
+      Ok, Got it!
+    </md-button>
+  </md-dialog-actions>
+</md-dialog>

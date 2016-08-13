@@ -1,0 +1,55 @@
+<div class="login-overlay bg-primary container-fluid animated" layout="column" ng-class="{'slideOutUp' : ctrl.overlayHide, 'slideInDown' : !ctrl.overlayHide && ctrl.isLeaving}">
+
+  <div class="text-center vcenter" layout="row" layout-margin="20" layout-align="center center">
+    <div>
+      <div class="m-b-50">
+        <div layout="row" layout-align="center" class="m-b-15">
+          <div class="img-login-logo">
+            <img src="images/mustache-3.008143c5.png" class="img-responsive" alt="">
+          </div>
+        </div>
+        <h1 class="md-display-1">Welcome to MustAske!</h1>
+        <h4 class="md-title m-b-30">a tool to facilitate questions</h4>
+        <div class="m-b-30"></div>
+      </div>
+
+        <div>
+          <p class="text-gray-lighter">Please enter the name of a room you want to join or create</p>
+          <form id="login-info" name="loginForm" md-no-autogrow="true" layout="column" layout-align="center center">
+            <md-input-container class="login-input-container m-b-0" md-autofocus="true" md-no-float="true" md-is-error="false">
+              <label>Room Name...</label>
+              <input type="text" name="roomNameOrId" class="md-accent" ng-model="ctrl.roomName" required ng-pattern="ctrl.input.pattern" ng-model-options="{ allowInvalid: true }">
+            </md-input-container>
+            <div class="m-t-0" layout="row">
+              <md-button ng-disabled="!loginForm.roomNameOrId.$valid" class="btn-outline btn-primary btn-gray-outlined md-accent" ng-click="ctrl.joinRoom()">Join</md-button>
+              <md-button ng-disabled="loginForm.roomNameOrId.$error.required" class="btn-outline btn-primary btn-gray-outlined" ng-click="ctrl.createRoom()">Create</md-button>
+            </div>
+          </form>
+        </div>
+        <!--<div ng-hide="ctrl.showRoom">-->
+          <!--<p class="text-gray-lighter">Please enter a name you would like to be known as</p>-->
+          <!--<form id="alias-info">-->
+            <!--<md-input-container class="login-input-container m-b-0 p-b-0" md-autofocus>-->
+              <!--<label>User Name...</label>-->
+              <!--<input type="text" ng-model="color">-->
+            <!--</md-input-container>-->
+            <!--<div class="m-t-0">-->
+              <!--<md-button class="btn-outline btn-primary btn-gray-outlined" ng-click="ctrl.isLoggedIn()">Cancel</md-button>-->
+              <!--<md-button class="btn-outline btn-primary btn-gray-outlined" ng-click="ctrl.isLoggedIn()">Submit</md-button>-->
+            <!--</div>-->
+          <!--</form>-->
+        <!--</div>-->
+
+      <div layout="row" layout-align="center">
+        <span ng-click="ctrl.help($event)" md-ink-ripple= "#333"  style="position:relative; padding-top:30px;">
+          <md-icon class="md-accent" md-font-icon="fa fa-info-circle fa-3x"></md-icon>
+          <md-tooltip md-direction="bottom">
+            how to use this app
+          </md-tooltip>
+        </span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
