@@ -1,8 +1,0 @@
-<div layout="row" layout-padding="5">
-  <div flex="50"><span class="content-page-title">Top Question</span></div>
-  <!--<div flex="50"><span class="pull-right"><md-icon md-font-icon="fa fa-search"></md-icon></span></div>-->
-</div>
-<question-card x-question="question"
-               ng-repeat="question in ctrl.topQuestions | filter : ctrl.zeroOrNull | orderBy:'-question_score' | limitTo: 5">
-
-</question-card>
