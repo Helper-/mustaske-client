@@ -66,6 +66,6 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "NODE_ENV=production node server/bin/www"
+    "start": "NODE_ENV=production node server/app.js"
   }
 }
