@@ -5,7 +5,6 @@
 npm install grunt-contrib-compass --save-dev
 npm install font-awesome
 gem update --system
-gem install sass
 gem install compass
 #bower install
 #grunt

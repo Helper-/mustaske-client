@@ -1,5 +1,5 @@
-$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
-$fa-font-path: "../bower_components/font-awesome/fonts/";
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap";
+$fa-font-path: "../bower_components/font-awesome/fonts";
 $use-slideOutUp: true;
 $use-slideInDown: true;
 
@@ -26,7 +26,7 @@ $use-slideInDown: true;
 @import "modules/polls";
 
 // google font
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
 
 $open-sans: 'Open Sans', sans-serif;
 
