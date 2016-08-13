@@ -66,7 +66,6 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "bash ./post_install.sh"
-
+    "start": "NODE_ENV=production node server/bin/www"
   }
 }
